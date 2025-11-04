@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Green Rush — Fresh Groceries in 30 Minutes</title>
+  <meta name="description" content="Green Rush delivers healthy groceries to your door in 30 minutes. Eat fresh, save time.">
+  <link rel="icon" href="">
+  <style>
+    :root { --green:#1a8c6e; --green-dark:#156c56; --bg:#eef2f1; --text:#0f172a; --muted:#475569; --white:#ffffff; }
+    * { box-sizing: border-box; } body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:var(--text); background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%); }
+    .container { max-width: 1080px; margin: 0 auto; padding: 24px; }
+    header { display:flex; align-items:center; justify-content:space-between; padding:12px 0; }
+    .brand-wrap { display:flex; align-items:center; gap:10px; }
+    .brand-title { font-weight:800; font-size:20px; color:var(--green-dark); letter-spacing:.4px; }
+    .nav a { color:var(--muted); text-decoration:none; margin-left:16px; font-weight:600; }
+    .hero { padding:56px 0; display:grid; grid-template-columns:1.2fr 1fr; gap:24px; align-items:center; }
+    .badge { display:inline-block; background:#dcfce7; color:var(--green-dark); padding:6px 10px; border-radius:999px; font-weight:700; font-size:12px; letter-spacing:.5px; }
+    h1 { font-size:42px; line-height:1.15; margin:12px 0; } p.lead { font-size:18px; color:var(--muted); margin:0 0 16px; }
+    .cta { display:inline-flex; align-items:center; gap:8px; background:var(--green); color:var(--white); padding:14px 18px; border-radius:12px; text-decoration:none; font-weight:700; }
+    .cta:hover { background:var(--green-dark); }
+    .ghost { display:inline-flex; align-items:center; gap:8px; background:#ecfeff; color:#065f46; padding:12px 14px; border-radius:12px; text-decoration:none; font-weight:700; border:1px solid #a7f3d0; }
+    .phone { background:var(--white); border:1px solid #e5e7eb; border-radius:24px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,.04); }
+    .section { padding:56px 0; } .grid-3 { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
+    .card { background:var(--white); border-radius:16px; padding:20px; border:1px solid #e5e7eb; box-shadow:0 8px 20px rgba(0,0,0,.03); }
+    .card h3 { margin:0 0 8px; } .muted { color:var(--muted); }
+    .how { background:#f0fdf4; border:1px solid #dcfce7; }
+    .footer { padding:24px 0 40px; color:var(--muted); font-size:14px; }
+    .downloads { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:12px; margin-top:12px; }
+    .btn { display:flex; align-items:center; justify-content:center; padding:14px; font-weight:800; border-radius:12px; text-decoration:none; border:1px solid #e5e7eb; background:#fff; }
+    .btn:hover { background:#f8fafc; }
+    .btn small { display:block; color:var(--muted); font-weight:600; }
+    .ugc { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+    .player { background:#000; border-radius:16px; overflow:hidden; border:1px solid #0f172a22; }
+    video { width:100%; height:auto; display:block; }
+    .gallery { display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; }
+    .snap { width:100%; border:1px solid #e2e8f0; border-radius:12px; background:#fff; padding:6px; }
+    .placeholder { display:flex; align-items:center; justify-content:center; height:160px; background:#f8fafc; color:#64748b; border:1px dashed #cbd5e1; border-radius:12px; }
+    @media (max-width: 900px) { .hero { grid-template-columns:1fr; } .grid-3 { grid-template-columns:1fr; } .ugc { grid-template-columns:1fr; } .gallery { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand-wrap">
+        
+        <div class="brand-title">Green Rush</div>
+      </div>
+      <nav class="nav">
+        <a href="#how">How it Works</a>
+        <a href="#features">Features</a>
+        <a href="#ugc">UGC Preview</a>
+        <a href="#downloads">Download</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="badge">Fresh groceries in 30 minutes</span>
+        <h1>Eat Fresh. Save Time.<br/>Groceries to your door — fast.</h1>
+        <p class="lead">Green Rush delivers farm-fresh ingredients to busy students and professionals in under 30 minutes. Healthier meals without the hassle.</p>
+        <div style="display:flex; gap:12px; flex-wrap: wrap;">
+          <a class="cta" id="cta" href="https://preview.kuafuai.net?shard_param=ck1hMHYzQ2NaaUhxL3Raa1dFL2poRjhRVXY2bncwTnFMajMwWnJqNUp0OEhLVmNrSE85UVo1cjdVNFJGNmV6eFg4YlM4dE13ZkxOTUthTDhheHF3dkE9PQ==&app_id=199840">Try Web Preview</a>
+          <a class="ghost" href="#how">See how it works</a>
+        </div>
+        <p class="muted" style="margin-top:12px;">Service areas: Suzhou campus & nearby districts · 7:30–22:00 daily</p>
+      </div>
+      <div class="phone">
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px;">
+          <strong>Popular bundles</strong>
+          <ul>
+            <li>One‑person Quick Cook Set</li>
+            <li>Protein + Greens Combo</li>
+            <li>Fruit Boost Pack</li>
+          </ul>
+          <strong>ETA</strong>
+          <p>~25 minutes</p>
+          <strong>Price</strong>
+          <p>From ¥19</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <h2>How it Works</h2>
+      <div class="grid-3">
+        <div class="card how">
+          <h3>1. Set your address</h3>
+          <p class="muted">Open the app and confirm your location on campus or at home.</p>
+        </div>
+        <div class="card how">
+          <h3>2. Pick fresh items</h3>
+          <p class="muted">Choose from curated bundles or build your own basket.</p>
+        </div>
+        <div class="card how">
+          <h3>3. Delivered in 30 minutes</h3>
+          <p class="muted">We dispatch the nearest rider and keep everything fresh on the way.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <h2>Why Green Rush</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Fresh & local</h3>
+          <p class="muted">Daily-sourced produce with clear origin info and best-by guidance.</p>
+        </div>
+        <div class="card">
+          <h3>Fast & reliable</h3>
+          <p class="muted">Smart routing for sub‑30‑minute delivery and live ETA tracking.</p>
+        </div>
+        <div class="card">
+          <h3>Healthy by default</h3>
+          <p class="muted">Diet-friendly bundles for low sugar, high protein, and balanced meals.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ugc" class="section">
+      <h2>UGC Preview</h2>
+      <div class="ugc">
+        <div class="player">
+          <video controls poster="" preload="none">
+            <source src="" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="card">
+          <h3>Project Snapshots</h3>
+          <p class="muted">A quick look at our progress and context.</p>
+          <div class="gallery">
+            <div class="placeholder">Add screenshots here</div>
+            <div class="placeholder">Add screenshots here</div>
+            <div class="placeholder">Add screenshots here</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="downloads" class="section">
+      <h2>Download</h2>
+      <p class="muted">Choose your platform or try the web preview.</p>
+      <div class="downloads">
+        <a class="btn" href="https://example.com/ios"><div><div> App Store</div><small>iOS (TestFlight or live)</small></div></a>
+        <a class="btn" href="https://example.com/android"><div><div>Google Play</div><small>Android (Beta)</small></div></a>
+        <a class="btn" href="https://preview.kuafuai.net?shard_param=ck1hMHYzQ2NaaUhxL3Raa1dFL2poRjhRVXY2bncwTnFMajMwWnJqNUp0OEhLVmNrSE85UVo1cjdVNFJGNmV6eFg4YlM4dE13ZkxOTUthTDhheHF3dkE9PQ==&app_id=199840"><div><div>Web Preview</div><small>Instant access</small></div></a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© 2025 Green Rush • Contact: hello@greenrush.app • Privacy • Terms</div>
+    </footer>
+  </div>
+</body>
+</html>
