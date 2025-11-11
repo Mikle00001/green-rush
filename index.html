@@ -39,13 +39,11 @@
     @media (max-width: 900px) { .hero { grid-template-columns:1fr; } .grid-3 { grid-template-columns:1fr; } .ugc { grid-template-columns:1fr; } .gallery { grid-template-columns:1fr; } }
   
     /* --- Comment section styles --- */
-    .comment-grid { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
-    .comment-card { background:var(--white); border:1px solid #e5e7eb; border-radius:16px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,.03); }
+    .comment-grid { display:grid; grid-template-columns: 1fr; gap:16px; }
+    .comment-card { background:var(--white); border:1px solid #e5e7eb; border-radius:16px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,.03); text-align:center; }
     .qr-wrap { display:flex; align-items:center; justify-content:center; padding:16px; background:#f8fafc; border:1px dashed #cbd5e1; border-radius:12px; }
     .qr-wrap img { width:220px; height:220px; object-fit:contain; }
-    .comment-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; }
     .note { font-size:14px; color:var(--muted); margin-top:8px; }
-    @media (max-width: 900px) { .comment-grid { grid-template-columns: 1fr; } }
 
   </style>
 </head>
@@ -132,7 +130,7 @@
       <h2>UGC Preview</h2>
       <div class="ugc">
         <div class="player">
-          <video controls poster="vedio_poster.jpg" preload="metadata">
+          <video controls preload="metadata" controls poster="vedio_poster.jpg" preload="metadata">
             <source src="mmexport1762245551298.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -160,55 +158,26 @@
     </section>
 
 
-    
-    
-<section class="section" id="qr-embedder" style="padding-top:24px; padding-bottom:0;">
-  <div class="comment-card" style="margin-bottom:16px;">
-    <h3 style="margin:0 0 8px 0;">二维码上传</h3>
-    <p class="muted" style="margin:0 0 8px 0;">上传你的二维码图片（PNG/JPG）。上传后会自动替换评论区二维码。</p>
-    <div style="display:flex; gap:8px; flex-wrap:wrap;">
-      <input id="qr-file" type="file" accept="image/*">
-    </div>
-    <p class="note">提示：二维码与本 HTML 文件及视频放在同一目录下可离线查看。</p>
-  </div>
-</section>
-
-
     <section id="comments" class="section">
       <h2>评论区</h2>
       <div class="comment-grid">
-        <div class="comment-card" style="text-align:center;">
+        <div class="comment-card">
           <h3>客户满意度调查问卷</h3>
-          <div class="qr-wrap" style="justify-content:center;">
-            <img id="comment-qr" src="" alt="扫码即可评论"/>
+          <div class="qr-wrap">
+            <!-- 将你的二维码图片命名为 comment-qr.png 放在同一目录；
+                 或者把下面 img 的 src 改成你的图片地址/数据URL（data:image/png;base64,....） -->
+            <img id="comment-qr" src="" alt="扫码即可评论">
           </div>
           <p class="note">扫码即可评论</p>
           <p class="note">请使用微信或手机浏览器扫描上方二维码填写问卷</p>
         </div>
       </div>
     </section>
-    
 
 
     <footer class="footer">
       <div>© 2025 Green Rush • Contact: hello@greenrush.app • Privacy • Terms</div>
     </footer>
   </div>
-
-  
-<script>
-document.addEventListener('DOMContentLoaded', ()=>{
-  const input = document.getElementById('qr-file');
-  const qr = document.getElementById('comment-qr');
-  if(!input || !qr) return;
-  input.addEventListener('change', ()=>{
-    const f = input.files[0];
-    if(!f) return;
-    const reader = new FileReader();
-    reader.onload = e => { qr.src = e.target.result; };
-    reader.readAsDataURL(f);
-  });
-});
-</script>
 </body>
 </html>
